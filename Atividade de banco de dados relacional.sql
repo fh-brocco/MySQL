@@ -4,15 +4,14 @@ CREATE DATABASE db_recursos_humanos;
 
 USE db_recursos_humanos;
 
-CREATE TABLE tb_colaboradores( 
-id BIGINT AUTO_INCREMENT,
-nome VARCHAR(255),
-idade INT,
-area VARCHAR(255),
-cargo VARCHAR(255),
-salario FLOAT(9,2),
-
-PRIMARY KEY(id)
+CREATE TABLE tb_colaboradores (
+    id BIGINT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    idade INT,
+    area VARCHAR(255),
+    cargo VARCHAR(255),
+    salario FLOAT(9 , 2 ),
+    PRIMARY KEY (id)
 );
 
 INSERT INTO tb_colaboradores(nome,idade,area,cargo,salario)
@@ -22,13 +21,30 @@ VALUES("Fernando",30,"Tecnologia","Gerente",7000.00),
 ("Maiar",19,"Tecnologia","Aprendiz",1200.00),
 ("Douglas",30,"Tecnologia","Desenvolvedor jr.",1900.00);
 
-UPDATE tb_colaboradores SET idade = 20 WHERE id = 4;
+UPDATE tb_colaboradores 
+SET 
+    idade = 20
+WHERE
+    id = 4;
 
-SELECT * FROM tb_colaboradores;
+SELECT 
+    *
+FROM
+    tb_colaboradores;
 
-SELECT nome,cargo,salario FROM tb_colaboradores WHERE salario < 2000;
+SELECT 
+    nome, cargo, salario
+FROM
+    tb_colaboradores
+WHERE
+    salario < 2000;
 
-SELECT nome,cargo,salario FROM tb_colaboradores WHERE salario > 2000;
+SELECT 
+    nome, cargo, salario
+FROM
+    tb_colaboradores
+WHERE
+    salario > 2000;
 
 
 
@@ -39,15 +55,14 @@ CREATE DATABASE db_e_commerce;
 
 USE db_e_commerce;
 
-CREATE TABLE tb_produtos( 
-id BIGINT AUTO_INCREMENT,
-produto VARCHAR(255),
-preco FLOAT(9,2),
-garantia VARCHAR(255),
-categoria VARCHAR(255),
-quantidade INT(255),
-
-PRIMARY KEY(id)
+CREATE TABLE tb_produtos (
+    id BIGINT AUTO_INCREMENT,
+    produto VARCHAR(255),
+    preco FLOAT(9 , 2 ),
+    garantia VARCHAR(255),
+    categoria VARCHAR(255),
+    quantidade INT(255),
+    PRIMARY KEY (id)
 );
 
 INSERT INTO tb_produtos(produto,preco,garantia,categoria,quantidade)
